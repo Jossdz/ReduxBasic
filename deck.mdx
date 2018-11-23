@@ -1,0 +1,201 @@
+export { default as theme } from './theme'
+
+import {Image, Head} from 'mdx-deck'
+import {Layout, Split, Highlight, List, Bgimg} from './src'
+import { CodeSurfer } from "mdx-deck-code-surfer"
+import theme from './theme'
+
+<Head>
+  <title>Intro a Redux - Jossdz</title>
+  <meta name="description" content="Slides para la presentación de introducción a redux, platica para principiantes en el desarrollo web moderno."/>
+  <link rel="shortcut icon" type="image/png" href="https://i.postimg.cc/Y24Vs84Q/Logo.png"/>
+  <link rel="shortcut icon" type="image/png" href="https://i.postimg.cc/Y24Vs84Q/Logo.png"/>
+</Head>
+
+ Intro a 
+ # Redux
+ 
+ <img src='https://raw.githubusercontent.com/reduxjs/redux/master/logo/logo.png' alt='redux-logo' width='20%'/>
+
+---
+export default Split
+
+  <div>
+    <h2><Highlight imp>JossDz</Highlight></h2>
+    <p>Jose Carlos Correa</p>    
+  </div>
+
+  <List>
+    <li>Js Fullstack</li>
+    <li>TA en Ironhack</li>
+    <br/>
+    <li>❤️ Comunidad</li>
+    <li>❤️ tecnologías de FB</li>
+  </List>
+
+---
+export default Layout
+
+![](https://raw.githubusercontent.com/reduxjs/redux/master/logo/logo-title-dark.png)
+
+---
+export default Split
+
+<div>
+  <h2>¿Que es?</h2>
+  <p>👉🏼 Redux es un contenedor predecible del estado de aplicaciones JavaScript.</p>
+</div>
+
+<div>
+  <h2>¿Que <Highlight> no </Highlight>es?</h2>
+  <p>👉🏼 Otro framework frontend</p>
+  <p>👉🏼 librería exclusiva de React</p>
+</div>
+
+---
+export default Layout
+
+<Bgimg src={'https://i.ytimg.com/vi/G39lKaONAlA/maxresdefault.jpg'} alt='Dan Abramov'/>
+
+<Highlight>Creada por</Highlight>
+
+<h2><Highlight imp>Dan Abramov</Highlight></h2>
+<small><Highlight>"Redux te ayuda a escribir aplicaciones que se comportan de manera consistente, corren en distintos ambientes (cliente, servidor y nativo), y son fáciles de probar."</Highlight></small>
+
+---
+export default Layout
+
+<img src='https://i.postimg.cc/HYJwR88c/Redux-flow-2x.png' width='76%' alt='redux-flow'/>
+
+---
+export default Layout
+
+<Image src='https://media.giphy.com/media/26hitzHAIouAaLAOI/giphy.gif' size='400' alt='wtf'/>
+
+---
+export default Split
+
+<div>
+  <h2><Highlight>
+    Action:
+  </Highlight></h2>
+  <p>
+    Un action es un objeto plano de Js que debe tener una propiedad type, esta propiedad ayuda a describir el cambio.
+  </p>
+</div>
+
+<CodeSurfer
+  code={require("!raw-loader!./assets/action.js")}
+  lang="javascript"
+  showNumbers={false}
+  dark={false}
+  steps={[
+    { tokens: {2:[0]}, notes:`requerimos un key 'type'`},
+    { tokens: {2:[3]}, notes:`El tipo como string que...`},
+    { tokens: {2:[3]}, notes:'describe un cambio.'}
+  ]}
+/>
+
+---
+export default Layout
+
+<div>
+  <h2><Highlight>
+    Reducer:
+  </Highlight></h2>
+  <p>
+    Las actions describen que algo pasó, pero no especifican cómo cambió el estado de la aplicación en respuesta. Esto es trabajo de los reducers que realizan el cambio en base a un estado inicial y las actions.
+  </p>
+</div>
+
+---
+export default Split
+
+<div>
+  <h2><Highlight>
+    Store:
+  </Highlight></h2>
+  <p>
+    El <b>Store</b> es el objeto que reúne al resto de las piezas de Redux y tiene las siguientes responsabilidades:
+  </p>
+</div>
+
+<List>
+  <li>👉🏼 Contiene el estado de la aplicación
+  accesible vía <b>getState( )</b></li>
+  <br/>
+  <li>👉🏼 Permite que el estado sea actualizado via <b>dispatch(action)</b></li>
+  <br/>
+  <li>👉🏼 Registra los listeners vía <b>subscribe(listener)</b></li>
+</List>
+
+---
+export default Layout
+
+<div>
+  <h2><Highlight>
+    Component/UI:
+  </Highlight></h2>
+  <p>
+    El component puede ser básicamente lo que sea que logre mostrar visualmente el store, podemos interactuar con Redux y colocar los resultados en la consola, el DOM o utilizar alguna librería para las vistas.
+  </p>
+  <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/1200px-Vue.js_Logo_2.svg.png' width='120px' alt='vuejs_logo'/>
+  <img src='https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg' width='180px' alt='react_logo'/>
+  <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/1200px-Angular_full_color_logo.svg.png' width='130px' alt='angular_logo'/>
+</div>
+
+---
+
+export default Layout
+
+<img src='https://i.postimg.cc/HYJwR88c/Redux-flow-2x.png' width='76%' alt='redux-flow'/>
+
+---
+export default Layout
+
+<Image src='https://media.giphy.com/media/20N4PWZTVLMQepRiMb/source.gif' size='500'/>
+
+---
+export default Layout
+
+<CodeSurfer
+  code={require("!raw-loader!./assets/redux_basic.js")}
+  lang="javascript"
+  showNumbers={false}
+  dark={false}
+  steps={[
+    {notes: `Redux en acción`},
+    {range: [1, 7], notes: `1. Reducer`},
+    {tokens: {1: [9, 10, 11, 12]}, notes: `Estado inicial`},
+    {range: [2,6], notes:`cambios en base al tipo de acción`},
+    {lines: [9], notes:`2. Store`},
+    {tokens: {11:[0,1,2]}, notes: `subscribe: ejecuta un cb cada que ocurre un cambio en el store`},
+    {tokens: {15:[4,5,6,7,8]}, notes: `getState: obtiene el estado actual`},
+    {tokens: {17:[0,1,2]}, notes: `dispatch: despacha una acción`},
+    {tokens: {17:[4,5,6,7,8,9,10]}, notes: `3. Actions: describen el cambio con un 'type'`}
+  ]}
+/>
+---
+export default Layout
+
+<p>live coding</p>
+<img src='https://media.giphy.com/media/3oGRFvUEbJdLWlawLu/giphy.gif' width='500px'/>
+
+---
+export default Layout
+
+<img src='https://i.postimg.cc/KmH0hpgY/Logo.png' width='200px' alt='jossDz-logo'/>
+<h2>@JossDz</h2>
+<div>
+  <a href='https://twitter.com/JossDz'><img src='https://image.flaticon.com/icons/svg/174/174876.svg' width='60px'/></a>
+  &nbsp;
+  &nbsp;
+  <a href='https://github.com/Jossdz'><img src='https://image.flaticon.com/icons/svg/25/25231.svg' width='60px'/></a>
+  &nbsp;
+  &nbsp;
+  <a href='https://medium.com/@jossdz'><img src='https://image.flaticon.com/icons/svg/174/174858.svg' width='60px'/></a>
+</div>
+
+
+
+

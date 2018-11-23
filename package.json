@@ -1,0 +1,24 @@
+{
+  "name": "redux_talk",
+  "version": "1.0.0",
+  "description": "Slides to Redux basics at BEDU",
+  "main": "deck.mdx",
+  "author": "JossDz",
+  "license": "MIT",
+  "devDependencies": {
+    "file-loader": "^2.0.0",
+    "mdx-deck": "^1.7.14",
+    "mdx-deck-code-surfer": "^0.5.3",
+    "raw-loader": "^0.5.1"
+  },
+  "scripts": {
+    "start": "mdx-deck deck.mdx",
+    "build": "mdx-deck build --no-html deck.mdx -d dist"
+  },
+  "dependencies": {
+    "npm": "^6.4.1",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "styled-components": "^4.1.1"
+  }
+}
