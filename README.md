@@ -21,4 +21,4 @@ npm start
 ```
 
 ## Slides Link
-[🎞 Slides](jossdz-redux.now.sh)
+[🎞 Slides](http://jossdz-redux.now.sh)
